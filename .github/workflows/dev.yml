@@ -19,8 +19,8 @@ jobs:
           key: ${{ secrets.REMOTE_PRIVATE_KEY }} # ec2 instance pem key
           port: ${{ secrets.REMOTE_SSH_PORT }} # 접속포트
           script: | # 실행할 스크립트
-            cd /home/ubuntu/ci-test/ci-test/ci-test2
+            cd /home/ubuntu/ci-test/ci-test/ci-test
             git pull origin dev
             npm i --force
             npm run build
-            npm run dev
+            npm run dev -- --port 3002
