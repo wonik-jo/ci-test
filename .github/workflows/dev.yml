@@ -23,5 +23,5 @@ jobs:
             git pull origin dev
             npm i --force
             npm run build
-            pm2 start npm --name ci-test -- run dev -- --port=3002
+            pm2 start npm --name ci-test -- run dev -- --port=3010
 
